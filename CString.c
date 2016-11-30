@@ -13,3 +13,24 @@ CString* new(char* str){
 
 	return newString;
 }
+
+int length(CString* self){
+
+	int i;
+	for(i=0; self->string[i]!='\0'; i++){}
+
+	return i;
+}
+
+char charAt(CString* self, int index){
+	return self->string[index];
+}
+
+
+void destroy(CString* self){
+	
+	if(self != NULL){
+		free(self);
+		self = NULL;
+	}
+}

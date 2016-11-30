@@ -5,7 +5,10 @@ int main()
 {
 	
 	CString* str = new("test");
-	printf("\n%s", str->string);
-
+	printf("%c\n", charAt(str,0));
+	
+	destroy(str);
+	if(str == NULL) printf("hi");
+	
 	return 0;
 }

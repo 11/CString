@@ -2,25 +2,13 @@
 typedef enum {false, true} bool;
 
 typedef struct CString{
-	
-	char* string;
-	
-	int (*length)(struct CString* self);
-	void (*substring)(struct CString* self, int startIndex, int endIndex);
-	char (*charAt)(struct CString * self, int index);
-	bool (*compareTo)(struct CString* self, struct CString* anotherString);
-	bool (*comapreToIgnoreCase)(struct CString self, struct CString* str);
-	struct CString* (*concat)(struct CString* self, struct CString* str);
-	bool (*contains)(struct CString* self, struct CString* str);
-	int (*indexOf)(struct CString* self, int ch);
-	int (*lastIndexOf)(struct CString* self, int ch);
-	struct CString* (*replace)(struct CString* self, char oldChar, char newChar);
-	struct CString* (*toUpperCase)(struct CString* self);
-	struct CString* (*toLowerCase)(struct CString* self);
-	struct CString* (*trim)();
+	char* string;	
+
 }CString;
 
 CString* new(char* str);
+
+void destroy(CString* self);
 
 int length(CString* self);
 
