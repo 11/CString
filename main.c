@@ -5,7 +5,8 @@ int main()
 {
 	
 	CString* str = new("test");
-	printf("%c\n", charAt(str,0));
+	toUpperCase(str);
+	printf("%s\n", str->string);
 	
 	destroy(str);
 	if(str == NULL) printf("hi");
