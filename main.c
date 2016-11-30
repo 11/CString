@@ -5,11 +5,9 @@ int main()
 {
 	
 	CString* str = new("test");
-	toUpperCase(str);
-	printf("%s\n", str->string);
+	printf("%d\n", lastIndexOf(str,'t'));
 	
 	destroy(str);
-	if(str == NULL) printf("hi");
 	
 	return 0;
 }

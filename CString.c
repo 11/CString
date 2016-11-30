@@ -26,6 +26,24 @@ char charAt(CString* self, int index){
 	return self->string[index];
 }
 
+int indexOf(CString* self, int ch){
+	int i;
+	for(i=0; self->string[i] != '\0'; i++){
+		if(self->string[i] ==ch) return i;
+	}
+
+	return -1;
+}
+
+int lastIndexOf(CString* self, int ch){
+	int i;
+	for(i = length(self); i>0; i--){
+		if(self->string[i] == ch) return i;
+	}
+
+	return -1;
+}	
+
 CString* replace(CString* self, char oldChar, char newChar){
 
 	int i;
